@@ -18,6 +18,7 @@ const Figures = () => {
             <svg>
                 <line x1={100} y1={100} x2={200} y2={200} stroke={"blue"}/>
             </svg>
+
             <svg>
                 <polyline points={"100,100 150,100, 250,150 300,200"} fill={"none"} stroke={"brown"}/>
             </svg>
