@@ -3,24 +3,25 @@ import React from 'react';
 const Figures = () => {
     return (
         <div className="box">
-            <svg className={"svg"}>
-                <rect width={200} height={100} x={100} y={100} fill={"brown"}/>
-            </svg>
-            <svg className={"svg"}>
-                <circle r={100} cx={200} cy={150} fill={"green"} stroke={"yellow"} strokeWidth={5}/>
-            </svg>
-            <svg className={"svg"}>
-                <ellipse rx={50} ry={100} fill={"gold"} cx={"50%"} cy={"50%"}/>
-            </svg>
-            <svg className={"svg"}>
-                <polygon points={"200,50 250,250 150,250"} fill={"silver"} stroke={"yellow"}/>
-            </svg>
+            {/*<svg className={"svg"}>*/}
+            {/*    <rect width={200} height={100} x={100} y={100} fill={"brown"}/>*/}
+            {/*</svg>*/}
+            {/*<svg className={"svg"}>*/}
+            {/*    <circle r={100} cx={200} cy={150} fill={"green"} stroke={"yellow"} strokeWidth={5}/>*/}
+            {/*</svg>*/}
+            {/*<svg className={"svg"}>*/}
+            {/*    <ellipse rx={50} ry={100} fill={"gold"} cx={"50%"} cy={"50%"}/>*/}
+            {/*</svg>*/}
+            {/*<svg className={"svg"}>*/}
+            {/*    <polygon points={"200,50 250,250 150,250"} fill={"silver"} stroke={"yellow"}/>*/}
+            {/*</svg>*/}
             <svg className={"svg"}>
                 <line x1={100} y1={100} x2={200} y2={200} stroke={"blue"}/>
             </svg>
             <svg className={"svg"}>
                 <polyline points={"100,100 150,100, 250,150 300,200"} fill={"none"} stroke={"brown"}/>
             </svg>
+
             <svg className={"svg-text"} width="402" height="302" viewBox="0 0 402 302" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -36,6 +37,9 @@ const Figures = () => {
                 </text>
             </svg>
 
+            <svg className={"svg svg-rect"}>
+                <rect className={"rect"} width={200} height={100} x={100} y={100} fill={"brown"} rx={5}/>
+            </svg>
 
         </div>
     );
