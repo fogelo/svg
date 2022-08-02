@@ -1,0 +1,16 @@
+body {
+  padding: 25px 0;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 20px;
+}
+
+svg {
+  width: 400px;
+  height: 300px;
+  border: 1px solid;
+}
