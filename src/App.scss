@@ -36,3 +36,7 @@ body {
 .svg-rect:hover .rect {
   stroke-dashoffset: 0;
 }
+
+.img {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

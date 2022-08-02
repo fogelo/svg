@@ -1,4 +1,6 @@
 import React from 'react';
+import car from "./assets/car.jpeg"
+
 
 const Figures = () => {
     return (
@@ -41,6 +43,7 @@ const Figures = () => {
                 <rect className={"rect"} width={200} height={100} x={100} y={100} fill={"brown"} rx={5}/>
             </svg>
 
+            <img src={car} alt="car" className={"img"}/>
         </div>
     );
 };
