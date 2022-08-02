@@ -1,17 +1,13 @@
 import React from 'react';
 import './App.scss';
+import Figures from "./Figures";
 
 function App() {
-  return (
-    <div className="box">
-        <svg></svg>
-        <svg></svg>
-        <svg></svg>
-        <svg></svg>
-        <svg></svg>
-        <svg></svg>
-    </div>
-  );
+    return (
+        <div>
+            <Figures/>
+        </div>
+    );
 }
 
 export default App;
