@@ -64,14 +64,19 @@ const Masks = () => {
 
             </svg>
 
-            {/*mask - оставляет то что входит в область mask*/}
+            {/*mask - это как бы полотно поверх фигуры к которой она применена. И из этого полотна мы можем вырезать фигуры, и видеть что под ним.
+            Очень не логично, но цвета означают прозрачность, fill: white - вырезаем из полотна маски элемент (делаем в этом месте полотно маски прозрачным),
+            а fill: black - в этом месте полотно не прозрачно
+
+            */}
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                <mask id="cut-off-bottom">
-                    <rect width="200" height="100"/>
+                <mask id="cut-off-bottom-mask">
+                    {/*<rect width="200" height="100" fill={"black"}/>*/}
                     <circle cx={50} cy={150} r={10} fill={"white"}/>
                 </mask>
 
-                <circle cx="100" cy="100" r="100" clipPath={"url(#cut-off-bottom)"}/>
+                <circle cx="100" cy="100" r="100" fill={"blue"}/>
+                <circle cx="100" cy="100" r="100" mask={"url(#cut-off-bottom-mask)"}/>
             </svg>
 
             {/*mask - еще умеет работать с градиентами*/}
@@ -93,20 +98,12 @@ const Masks = () => {
 
             <svg>
                 <mask id="myMask">
-                    <rect x="0" y="0" width="100" height="100" fill="white"/>
+                    <rect x="0" y="0" width="200" height="200" fill="white"/>
                     <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black"/>
                 </mask>
 
-                {/*<polygon points="-10,110 110,110 110,-10" fill="orange"/>*/}
-
                 <circle cx="50" cy="50" r="50" mask="url(#myMask)"/>
             </svg>
-            <svg>
-                <circle cx="50" cy="50" r="50"/>
-                <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black"/>
-                <rect x="0" y="0" width="100" height="100" fill="white"/>
-            </svg>
-
         </div>
     );
 };
