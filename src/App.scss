@@ -40,3 +40,7 @@ body {
 .img {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
+.img2{
+  clip-path: url("#apple")
+}

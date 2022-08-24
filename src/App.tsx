@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.scss';
-import Figures from "./Figures";
+import Masks from "./components/Masks/Masks";
 
 function App() {
     return (
         <div>
-            <Figures/>
+            {/*<Figures/>*/}
+            <Masks/>
         </div>
     );
 }
